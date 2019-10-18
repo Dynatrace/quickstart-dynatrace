@@ -42,9 +42,9 @@ function installSeed() {
     rm /tmp/installer.out
 
     echo "Storing API token"
-    aws ssm put-parameter --region $REGION --name "$API_TOKEN_NAME" --value "$API_TOKEN" --type String --overwrite
+    aws ssm put-parameter --region=$REGION --name="$API_TOKEN_NAME" --value="$API_TOKEN" --type=String --overwrite
     echo "Storing seed IP address"
-    aws ssm put-parameter --region $REGION --name "$SEED_IP_NAME" --value "$SEED_IP" --type String --overwrite
+    aws ssm put-parameter --region=$REGION --name="$SEED_IP_NAME" --value="$SEED_IP" --type=String --overwrite
 
     echo "Done installing seed node"
 
